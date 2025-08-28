@@ -1,0 +1,71 @@
+[
+  {
+    "v": 10,
+    "name": "test API",
+    "folders": [],
+    "requests": [
+      {
+        "v": "15",
+        "endpoint": "http://localhost:3000/generate-text",
+        "name": "generate text",
+        "params": [],
+        "headers": [],
+        "method": "POST",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"prompt\": \"Haloo Google Gemini dari hoppscotch!\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "15",
+        "endpoint": "http://localhost:3000/generate-text-from-image",
+        "name": "generate text from upload image",
+        "params": [],
+        "headers": [],
+        "method": "POST",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "multipart/form-data",
+          "body": [
+            {
+              "key": "prompt",
+              "value": "haloo, tolong bantu penjelasan dari isi gambar ini",
+              "active": true,
+              "isFile": false
+            },
+            {
+              "key": "image",
+              "value": [
+                {}
+              ],
+              "active": true,
+              "isFile": true
+            }
+          ]
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authActive": true,
+      "authType": "none"
+    },
+    "headers": [],
+    "variables": [],
+    "_ref_id": "coll_metc0zu3_48a6390f-f723-453b-bdf3-35e9a9e2a1b2"
+  }
+]
